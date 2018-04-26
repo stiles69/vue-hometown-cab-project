@@ -12,6 +12,8 @@ import {
   VIcon,
   VGrid,
   VToolbar,
+  VCard,
+  VDivider,
   transitions
 } from 'vuetify'
 import '../node_modules/vuetify/src/stylus/app.styl'
@@ -26,18 +28,22 @@ Vue.use(Vuetify, {
     VIcon,
     VGrid,
     VToolbar,
+    VCard,
+    VDivider,
     transitions
   },
   theme: {
-    primary: '#ee44aa',
-    secondary: '#424242',
-    accent: '#82B1FF',
-    error: '#FF5252',
-    info: '#2196F3',
-    success: '#4CAF50',
-    warning: '#FFC107'
+    primary: '#FDD835',
+    secondary: '#FFF59D',
+    accent: '#FFD600',
+    error: '#f44336',
+    warning: '#FF5722',
+    info: '#2196f3',
+    success: '#4caf50'
   },
 })
+
+import './assets/stylus/main.styl'
 
 Vue.config.productionTip = false
 
