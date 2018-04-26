@@ -1,0 +1,1 @@
+v-on:click='$vuetify.goTo(item.target, item.options)'

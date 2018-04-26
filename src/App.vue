@@ -1,47 +1,49 @@
-<template>
-  <div id='App'>
-    <v-app>
-      <v-navigation-drawer app temporary v-model='drawer' aria-label='Navigation Menu'>
-        <v-list>        
-          <v-list-tile value='true' v-for='(item, i) in items' v-bind:key='i' >
-              <v-list-tile-action class='HometownLink'>
-                <v-icon v-html='item.icon' v-on:click='$vuetify.goTo(item.target, item.options)' aria-label='Navigation Button' class='HometownLink'></v-icon>
-              </v-list-tile-action>
-            <v-list-tile-title v-text='item.title' v-on:click='$vuetify.goTo(item.target, item.options)' aria-label='Navigation Title' class='HometownLink'></v-list-tile-title>
-          </v-list-tile>
-        </v-list>
-      </v-navigation-drawer>
-      <v-toolbar app color='primary' class='white--text'>
-        <v-toolbar-side-icon @click.stop='drawer = !drawer' aria-label='Navigation Button'></v-toolbar-side-icon>
-        <v-toolbar-title v-text='title' class='black--text HometownToolbar'></v-toolbar-title>
-        <v-spacer></v-spacer>        
-      </v-toolbar>
-      <v-content>
-        <router-view></router-view>
-      </v-content>
-      <v-footer dark color='primary' class='black--text' height='auto' aria-label='Footer'>
-        <v-layout column align-content-center>
-          <div class='HometownFooter' aria-label='Company Name'>Hometown Cab</div>        
-          <div class='hidden-sm-and-down HometownFooter' aria-label='Owned and Operated by'>Owned and Operated by</div>
-          <div class='hidden-sm-and-down HometownFooter' aria-label='Owner'>{{ Owner }}</div>
-          <div class='HometownFooter' aria-label='Copyright'>&copy; Copyright 2017 Hometown Cab</div>
-          <div class='HometownFooter' aria-label='Version'>Version {{ Version }}</div>
-        </v-layout>
-      </v-footer>    
-    </v-app>
-  </div>
+<template>  
+  <v-app>
+    <v-navigation-drawer app temporary v-model='drawer' aria-label='Navigation Menu'>
+      <v-list>        
+        <v-list-tile value='true' v-for='(item, i) in items' v-bind:key='i' >
+            <v-list-tile-action class='HometownLink'>
+              <a v-bind:href='item.target'><v-icon v-html='item.icon' aria-label='Navigation Button' class='HometownLink'></v-icon></a>                
+            </v-list-tile-action>
+          <a v-bind:href='item.target'><v-list-tile-title v-text='item.title' aria-label='Navigation Title' class='HometownLink'></v-list-tile-title></a>
+        </v-list-tile>
+      </v-list>
+    </v-navigation-drawer>
+    <v-toolbar app color='primary' class='white--text'>
+      <v-toolbar-side-icon @click.stop='drawer = !drawer' aria-label='Navigation Button'></v-toolbar-side-icon>
+      <v-toolbar-title v-text='title' class='black--text HometownToolbar'></v-toolbar-title>
+      <v-spacer></v-spacer>        
+    </v-toolbar>
+    <v-content>
+      <router-view></router-view>
+    </v-content>
+    <v-footer dark color='primary' class='black--text' height='auto' aria-label='Footer'>
+      <v-layout column align-content-center>
+        <div class='HometownFooter' aria-label='Company Name'>Hometown Cab</div>        
+        <div class='hidden-sm-and-down HometownFooter' aria-label='Owned and Operated by'>Owned and Operated by</div>
+        <div class='hidden-sm-and-down HometownFooter' aria-label='Owner'>{{ Owner }}</div>
+        <div class='HometownFooter' aria-label='Copyright'>&copy; Copyright 2017 Hometown Cab</div>
+        <div class='HometownFooter' aria-label='Version'>Version {{ Version }}</div>
+      </v-layout>
+    </v-footer>    
+  </v-app>
 </template>
 
 <script>
 import Constants from '@/components/constants.js'
 
 export default {
-  name: 'App',
+  name: 'App',  
   data () {
     return {
       clipped: false,
       drawer: false,
       fixed: false,
+      miniVariant: false,
+      right: false,
+      rightDrawer: false,
+      title: 'Hometown Cab',
       items: [
         { icon: 'home', title: 'Home', target: '#home', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
         { icon: 'contact_phone', title: 'Contact', target: '#contact', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
@@ -49,11 +51,7 @@ export default {
         { icon: 'attach_money', title: 'Pricing', target: '#pricing', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
         { icon: 'money_off', title: 'Specials', target: '#specials', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
         { icon: 'record_voice_over', title: 'Testimonials', target: '#testimonials', options: '[ easing: "easeInOutCubic", duration: 500 ]' }
-      ],
-      miniVariant: false,
-      right: false,
-      rightDrawer: false,
-      title: 'Hometown Cab',
+      ],      
       companyname: Constants.companyname,
       telnum1: Constants.telnum1,
       telnum2: Constants.telnum2,
@@ -64,11 +62,9 @@ export default {
       oneWayPrice: Constants.onewayprice,
       roundTripPrice: Constants.roundtripprice,
       additionalStopPrice: Constants.additionalstopprice,
-      Version: Constants.version,
-      Easing: 'easeInOutCubic',
-      Duration: 500
+      Version: Constants.version
     }
-  } 
+  }  
 }
 </script>
 
