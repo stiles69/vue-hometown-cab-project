@@ -16,9 +16,9 @@
         <v-toolbar-title v-text='title' class='black--text HometownToolbar'></v-toolbar-title>
         <v-spacer></v-spacer>        
       </v-toolbar>
-      <v-container>
+      <v-content>
         <router-view></router-view>
-      </v-container>
+      </v-content>
       <v-footer dark color='primary' class='black--text' height='auto' aria-label='Footer'>
         <v-layout column align-content-center>
           <div class='HometownFooter' aria-label='Company Name'>Hometown Cab</div>        
