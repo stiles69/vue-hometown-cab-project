@@ -43,12 +43,12 @@ export default {
       drawer: false,
       fixed: false,
       items: [
-        { icon: 'home', title: 'Home', target: '#home', options: '[ easing: "easeInOutCubic", duration: 300 ]' },
-        { icon: 'contact_phone', title: 'Contact', target: '#contact', options: '[ easing: "easeInOutCubic", duration: 300 ]' },
-        { icon: 'access_time', title: 'Hours', target: '#hours', options: '[ easing: "easeInOutCubic", duration: 300 ]' },
-        { icon: 'attach_money', title: 'Pricing', target: '#pricing', options: '[ easing: "easeInOutCubic", duration: 300 ]' },
-        { icon: 'money_off', title: 'Specials', target: '#specials', options: '[ easing: "easeInOutCubic", duration: 300 ]' },
-        { icon: 'record_voice_over', title: 'Testimonials', target: '#testimonials', options: '[ easing: "easeInOutCubic", duration: 300 ]' }
+        { icon: 'home', title: 'Home', target: '#home', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
+        { icon: 'contact_phone', title: 'Contact', target: '#contact', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
+        { icon: 'access_time', title: 'Hours', target: '#hours', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
+        { icon: 'attach_money', title: 'Pricing', target: '#pricing', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
+        { icon: 'money_off', title: 'Specials', target: '#specials', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
+        { icon: 'record_voice_over', title: 'Testimonials', target: '#testimonials', options: '[ easing: "easeInOutCubic", duration: 500 ]' }
       ],
       miniVariant: false,
       right: false,
@@ -66,12 +66,12 @@ export default {
       additionalStopPrice: Constants.additionalstopprice,
       Version: Constants.version,
       Easing: 'easeInOutCubic',
-      Duration: 300
+      Duration: 500
     }
   } 
 }
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons')
+
 </style>
