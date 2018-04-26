@@ -1,6 +1,6 @@
 {
   "name": "vue-hometown-cab-project",
-  "version": "194.0.0",
+  "version": "195.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
