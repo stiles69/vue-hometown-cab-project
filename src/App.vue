@@ -73,6 +73,5 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-@import url('./assets/css/hometown.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons')
 </style>
