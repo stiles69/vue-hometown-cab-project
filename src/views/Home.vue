@@ -2,7 +2,7 @@
   <div id='home'>
     <!-- Begin Main Content -->
       <!--Begin Cover Image-->
-      <img src='./assets/img/Cover-1920x950.png' class='HometownImage' width='100%' aria-label='Cover Image' />    
+      <img src='../assets/img/Cover-1920x950.png' class='HometownImage' width='100%' aria-label='Cover Image' />    
       <!--End Cover Image-->
       <!--Begin Heading-->
       <v-layout column align-center>
