@@ -1,1 +1,3 @@
 v-on:click='$vuetify.goTo(item.target, item.options)'
+
+<a v-bind:href='item.target'></a>

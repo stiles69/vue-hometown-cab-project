@@ -1,12 +1,12 @@
 <template>  
   <v-app>
-    <v-navigation-drawer app temporary v-model='drawer' aria-label='Navigation Menu'>
+    <v-navigation-drawer app temporary v-model='drawer' class='HometownMenu' aria-label='Navigation Menu'>
       <v-list>        
         <v-list-tile value='true' v-for='(item, i) in items' v-bind:key='i' >
             <v-list-tile-action class='HometownLink'>
-              <a v-bind:href='item.target'><v-icon v-html='item.icon' aria-label='Navigation Button' class='HometownLink'></v-icon></a>                
+              <div class='HometownLink' @click="$vuetify.goTo(item.target, item.options)"><v-icon v-html='item.icon' aria-label='Navigation Button' class='HometownLink'></v-icon></div>                
             </v-list-tile-action>
-          <a v-bind:href='item.target'><v-list-tile-title v-text='item.title' aria-label='Navigation Title' class='HometownLink'></v-list-tile-title></a>
+          <div class='HometownLink' @click="$vuetify.goTo(item.target, item.options)"><v-list-tile-title v-text='item.title' aria-label='Navigation Title' class='HometownLink'></v-list-tile-title></div>
         </v-list-tile>
       </v-list>
     </v-navigation-drawer>
@@ -45,12 +45,12 @@ export default {
       rightDrawer: false,
       title: 'Hometown Cab',
       items: [
-        { icon: 'home', title: 'Home', target: '#home', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
-        { icon: 'contact_phone', title: 'Contact', target: '#contact', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
-        { icon: 'access_time', title: 'Hours', target: '#hours', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
-        { icon: 'attach_money', title: 'Pricing', target: '#pricing', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
-        { icon: 'money_off', title: 'Specials', target: '#specials', options: '[ easing: "easeInOutCubic", duration: 500 ]' },
-        { icon: 'record_voice_over', title: 'Testimonials', target: '#testimonials', options: '[ easing: "easeInOutCubic", duration: 500 ]' }
+        { icon: 'home', title: 'Home', target: '#app', options: '[ easing: "easeInOutQuad", duration: 800 ]' },
+        { icon: 'contact_phone', title: 'Contact', target: '#contact', options: '[ easing: "easeInOutQuad", duration: 800 ]' },
+        { icon: 'access_time', title: 'Hours', target: '#hours', options: '[ easing: "easeInOutQuad", duration: 800 ]' },
+        { icon: 'attach_money', title: 'Pricing', target: '#pricing', options: '[ easing: "easeInOutQuad", duration: 800 ]' },
+        { icon: 'money_off', title: 'Specials', target: '#specials', options: '[ easing: "easeInOutQuad", duration: 800 ]' },
+        { icon: 'record_voice_over', title: 'Testimonials', target: '#testimonials', options: '[ easing: "easeInOutQuad", duration: 800 ]' }
       ],      
       companyname: Constants.companyname,
       telnum1: Constants.telnum1,
@@ -62,9 +62,10 @@ export default {
       oneWayPrice: Constants.onewayprice,
       roundTripPrice: Constants.roundtripprice,
       additionalStopPrice: Constants.additionalstopprice,
-      Version: Constants.version
+      Version: Constants.version,
+      Owner: Constants.ownername
     }
-  }  
+  }
 }
 </script>
 
