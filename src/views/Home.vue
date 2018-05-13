@@ -21,12 +21,12 @@
       <p class='title'>        
         <v-icon>phone</v-icon>
         {{ telnum1 }}<span> </span>
-        <v-icon @click='customTextToClipboard1'>content_copy</v-icon>
+        <v-btn flat icon color='primary' v-on:click='customTextToClipboard1'><v-icon>content_copy</v-icon></v-btn>
       </p>
       <p class='title'>
         <v-icon>phone</v-icon>
         {{ telnum2 }}<span> </span>
-        <v-icon @click='customTextToClipboard2'>content_copy</v-icon>
+        <v-btn flat icon color='primary' v-on:click='customTextToClipboard2'><v-icon>content_copy</v-icon></v-btn>
       </p>
     </v-card-text>
     </v-card>    
@@ -167,31 +167,31 @@ export default {
       additionalStopPrice: Constants.additionalstopprice
     }
   },
-    methods: {
-    customTextToClipboard1 () {
-      var textArea = document.createElement('textarea')
-      textArea.value = telnum1
-      document.body.appendChild(textArea)
-      textArea.select()
-      try {
-        document.execCommand('copy')
-      } catch (err) {
-        window.alert('Oops, unable to copy')
-      }
-      document.body.removeChild(textArea)
-    },
-    customTextToClipboard2 () {
-      var textArea = document.createElement('textarea')
-      textArea.value = telnum2
-      document.body.appendChild(textArea)
-      textArea.select()
-      try {
-        document.execCommand('copy')
-      } catch (err) {
-        window.alert('Oops, unable to copy')
-      }
-      document.body.removeChild(textArea)
-    }
+    methods: {      
+      customTextToClipboard1: function () {        
+        var textArea = document.createElement('textarea')
+        textArea.value = Constants.telnum1
+        document.body.appendChild(textArea)
+        textArea.select()
+        try {
+          document.execCommand('copy')         
+        } catch (err) {
+          log.err
+        }
+        document.body.removeChild(textArea)
+      },
+      customTextToClipboard2: function (event) {
+        var textArea = document.createElement('textarea')        
+        textArea.value = Constants.telnum2
+        document.body.appendChild(textArea)
+        textArea.select()     
+        try {
+          document.execCommand('copy')          
+        } catch (err) {
+          log.err
+        }
+        document.body.removeChild(textArea)
+      },
   }
 }
 </script>
