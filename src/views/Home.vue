@@ -21,7 +21,7 @@
       <p class='title'>        
         <v-icon>phone</v-icon>
         {{ telnum1 }}<span> </span>
-        <v-icon>content_copy</v-icon>
+        <v-icon @click='customTextToClipboard1'>content_copy</v-icon>
       </p>
       <p class='title'>
         <v-icon>phone</v-icon>
@@ -170,7 +170,7 @@ export default {
     methods: {
     customTextToClipboard1 () {
       var textArea = document.createElement('textarea')
-      textArea.value = telNum1
+      textArea.value = telnum1
       document.body.appendChild(textArea)
       textArea.select()
       try {
@@ -182,7 +182,7 @@ export default {
     },
     customTextToClipboard2 () {
       var textArea = document.createElement('textarea')
-      textArea.value = telNum2
+      textArea.value = telnum2
       document.body.appendChild(textArea)
       textArea.select()
       try {
