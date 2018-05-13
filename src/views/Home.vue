@@ -26,7 +26,7 @@
       <p class='title'>
         <v-icon>phone</v-icon>
         {{ telnum2 }}<span> </span>
-        <v-icon>content_copy</v-icon>
+        <v-icon @click='customTextToClipboard2'>content_copy</v-icon>
       </p>
     </v-card-text>
     </v-card>    
@@ -165,6 +165,32 @@ export default {
       oneWayPrice: Constants.onewayprice,
       roundTripPrice: Constants.roundtripprice,
       additionalStopPrice: Constants.additionalstopprice
+    }
+  },
+    methods: {
+    customTextToClipboard1 () {
+      var textArea = document.createElement('textarea')
+      textArea.value = telNum1
+      document.body.appendChild(textArea)
+      textArea.select()
+      try {
+        document.execCommand('copy')
+      } catch (err) {
+        window.alert('Oops, unable to copy')
+      }
+      document.body.removeChild(textArea)
+    },
+    customTextToClipboard2 () {
+      var textArea = document.createElement('textarea')
+      textArea.value = telNum2
+      document.body.appendChild(textArea)
+      textArea.select()
+      try {
+        document.execCommand('copy')
+      } catch (err) {
+        window.alert('Oops, unable to copy')
+      }
+      document.body.removeChild(textArea)
     }
   }
 }
