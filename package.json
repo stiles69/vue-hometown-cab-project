@@ -1,6 +1,6 @@
 {
   "name": "vue-hometown-cab-project",
-  "version": "204.0.0",
+  "version": "205.0.0",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -22,7 +22,7 @@
     "stylus-loader": "^3.0.1",
     "vue-cli-plugin-vuetify": "^0.1.2",
     "vue-template-compiler": "^2.5.13",
-    "vuepress": "^0.8.4"
+    "vuepress": "^0.11.0"
   },
   "browserslist": [
     "> 1%",

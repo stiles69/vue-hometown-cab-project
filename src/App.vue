@@ -49,7 +49,7 @@ export default {
         { icon: 'contact_phone', title: 'Contact', target: '#contact', options: '[ easing: "easeInOutQuad", duration: 800 ]' },
         { icon: 'access_time', title: 'Hours', target: '#hours', options: '[ easing: "easeInOutQuad", duration: 800 ]' },
         { icon: 'attach_money', title: 'Pricing', target: '#pricing', options: '[ easing: "easeInOutQuad", duration: 800 ]' },
-        { icon: 'money_off', title: 'Specials', target: '#specials', options: '[ easing: "easeInOutQuad", duration: 800 ]' },
+        { icon: 'local_taxi', title: 'Specials', target: '#specials', options: '[ easing: "easeInOutQuad", duration: 800 ]' },
         { icon: 'record_voice_over', title: 'Testimonials', target: '#testimonials', options: '[ easing: "easeInOutQuad", duration: 800 ]' }
       ],      
       companyname: Constants.companyname,
