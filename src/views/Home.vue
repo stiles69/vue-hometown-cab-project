@@ -103,11 +103,6 @@
     <v-card-title class='subheading'>
       We offer discounts for Seniors and Veterans.
     </v-card-title>
-    <v-card-title class='subheading'>
-      <div>Weekly Discounts and Specials (See our <span>
-      <a href='https://www.facebook.com/Hometown-Cab-141349606414372/' target='_blank' rel='noopener' class='HometownLink'>Facebook Page</a>)</span>
-      </div>
-    </v-card-title>
     </v-card>
     <!-- End Specials -->
     <!-- Begin Testimonials -->
