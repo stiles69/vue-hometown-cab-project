@@ -7,7 +7,7 @@ const roundtripprice = '$12 Roundtrip (Local)*'
 const additionalstopprice = '$2 For Each Additional Stop (Local)*'
 const companyslogan = "We're Taking you Places"
 const hours = [ 'Sunday - Thursday', '5:30 AM - 12:00 AM', 'Friday - Saturday', '5:30 AM - 2:30 AM' ]
-const version = '206'
+const version = '207'
 
 export default {
   companyname, telnum1, telnum2, ownername, onewayprice, roundtripprice, additionalstopprice, companyslogan, hours, version
