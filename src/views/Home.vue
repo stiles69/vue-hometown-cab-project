@@ -18,7 +18,8 @@
       </v-toolbar-title>
     </v-toolbar>
     <v-card-text>
-      <p class='title'>        
+      <p class='title'>
+	<fa :icon="faFlag" />        
         <v-icon>phone</v-icon>
         {{ telnum1 }}<span> </span>
         <v-btn flat icon color='primary' v-on:click='customTextToClipboard1'><v-icon>content_copy</v-icon></v-btn>
@@ -151,6 +152,7 @@
 
 <script>
 import Constants from '@/components/constants.js'
+import Flag from '@/components/Flag.js'
 export default {
   name: 'home',
   data: function () {
